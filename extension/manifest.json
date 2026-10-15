@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Save Timer for Edge",
+  "version": "2.0.0",
+  "description": "Automatically requests Ctrl+S while a PDF is active in Edge. Adjustable interval, no native helper.",
+  "minimum_chrome_version": "118",
+  "permissions": [
+    "storage",
+    "tabs",
+    "debugger"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PDF Save Timer",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png"
+    }
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqsj0949hINWWIHeNlXf5EWc31ReocyjW4ivEAa9nEsUxGX0VH3zK0lndcWSDT7QaT8Xaut3YJMMtgzDMDfIlHpPQ8yUtkr2sv49jyRDyrIIabDPfL/E8tEpJLKSGFj3LLk9cENGri+EXrM4nRFS91C+VbfXbfSCpIU2RbKBu0b3Z/VoR2jLMpI8ZTw318fzzR6i43mHMYVzn9CuDwPXmpBFtlUdjIZQp9ArTEKq8wR8J7cOhrmLAGVoKUysiaa1QsfuNXt/sJP+D/Bg79oo/6hEg0My7wIcbNzbnQC/tyc1weCgBJCVQ+vijUf8JgrlP4kBTUvshyYHWWHP5BYRbkQIDAQAB",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "host_permissions": [
+    "file:///*"
+  ]
+}

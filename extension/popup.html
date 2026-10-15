@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF Save Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><span class="mark" aria-hidden="true">↧</span><div><p class="eyebrow">AUTOMATIC CTRL + S</p><h1>PDF Save Timer</h1></div></header>
+  <main>
+    <section class="card">
+      <div class="row"><div><h2>Autosave</h2><p>Only the active PDF in Edge</p></div><label class="switch"><input id="enabled" type="checkbox" aria-label="Enable automatic Ctrl+S"><span></span></label></div>
+      <div class="interval"><label for="seconds">Press Ctrl+S every</label><div><input id="seconds" type="number" min="5" max="600" step="1" value="12" required><span>seconds</span><button id="apply" type="button">Apply</button></div></div>
+    </section>
+    <p id="status" class="status" role="status" aria-live="polite">Loading…</p>
+    <button id="retry" type="button" hidden>Retry</button>
+    <details><summary>How it works</summary><p>A .pdf address or a filename ending in .pdf in the tab title starts the timer automatically. Switching tabs or leaving Edge pauses it.</p><p>Edge shows a debugging banner while this extension sends keyboard events. Canceling the banner turns autosave off.</p><p>This extension requests Ctrl+S through the browser. Edge’s PDF viewer may ignore it. A request is not confirmation that your file was saved.</p></details>
+    <footer>Extension only · No helper · No uploads</footer>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
